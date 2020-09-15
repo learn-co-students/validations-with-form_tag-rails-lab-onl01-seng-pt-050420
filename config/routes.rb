@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Routes for AuthorsController actions
+  resources :authors, only: [:show, :new, :create, :edit, :update]
+  #
+  # Routes for PostsController actions
+  resources :posts, only: [:show, :new, :create, :edit, :update]
 end
