@@ -1,5 +1,5 @@
-<h2>Editing "<%= @post.title %>"</h2>
-<%= form_tag posts_path(@post), method: "patch" do %>
+<h2>Create Post<%= @post.title %></h2>
+<%= form_tag posts_path(@post), method: "post" do %>
   <div class="field">
     <%= label_tag "title", "Title" %>
     <%= text_field_tag "title", @post.title %>
@@ -20,6 +20,5 @@
     <br />
     <%= text_area_tag "content", @post.content %>
   </div>
-  <%= submit_tag "Update" %>
+  <%= submit_tag "Create Post" %>
 <% end %>
-
